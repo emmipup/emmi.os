@@ -1,21 +1,94 @@
+/* Body */
+body {
+  background-color: #1c1c1c;
+  color: #f7f7f7;
+  font-family: 'Groovy Bubble', cursive;
+}
+
+/* Header */
 header {
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: #1c1c1c;
   padding: 20px;
 }
 
-header img {
+.header-image {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.header-image img {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 48px;
+  font-size: 72px;
   margin-bottom: 10px;
+  color: #f7f7f7;
+  text-shadow: 2px 2px #000;
 }
 
 header p {
-  font-size: 24px;
-  color: #666666;
+  font-size: 36px;
+  color: #f7f7f7;
+  text-shadow: 2px 2px #000;
 }
+
+/* Footer */
+.footer {
+  background-color: #1c1c1c;
+  color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+}
+
+.social-links li a i {
+  font-size: 20px;
+  color: #1c1c1c;
+}
+
+/* Color Palette */
+$primary-color: #ff4d4d; /* Red */
+$secondary-color: #ffd633; /* Yellow */
+$tertiary-color: #333333; /* Dark Grey */
+$quaternary-color: #f7f7f7; /* Light Grey */
+
+/* Fonts */
+@import url('<https://fonts.googleapis.com/css?family=Groovy+Bubble&display=swap>');

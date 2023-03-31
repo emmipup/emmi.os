@@ -79,3 +79,7 @@
   color: var(--dark-gray);
   text-shadow: 2px 2px var(--lighter-gray);
 }
+
+.header-image img {
+  display: none;
+}

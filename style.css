@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Amatic SC';
-  src: url('./fonts/amatic_sc/AmaticSC-Regular.ttf') format('truetype');
+  src: url('../fonts/amatic_sc/AmaticSC-Regular.ttf') format('truetype');
 }
 
 /* Header */

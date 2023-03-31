@@ -1,36 +1,81 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>emmi.os</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-image">
-        <img src="./images/header.gif" alt="Retro anime gif header">
-        <div class="header-text">
-          <h1>emmi.os</h1>
-          <p>welcome to the emmiverse</p>
-        </div>
-      </div>
-    </header>
+/* Font files */
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('./fonts/AmaticSC-Regular.ttf') format('truetype');
+}
 
-    <nav class="navigation-bar">
-      <ul class="navigation-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+@font-face {
+  font-family: 'Audiowide';
+  src: url('./fonts/Audiowide-Regular.ttf') format('truetype');
+}
 
-    <!-- rest of your website content goes here -->
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
 
-    <footer class="footer">
-      <p>&copy; 2021 emmi.os</p>
-    </footer>
-  </body>
-</html>
+@font-face {
+  font-family: 'WorkSans';
+  src: url('./fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
 
+/* Color palette */
+:root {
+  --dark-gray: #222222;
+  --medium-gray: #5c5c5c;
+  --light-gray: #b3b3b3;
+  --lighter-gray: #e6e6e6;
+  --white: #f7f7f7;
+  --purple: #9b7fd4;
+  --blue: #4c6cb3;
+  --pink: #ff8c8c;
+  --lavender: #e6e6fa;
+  --green: #8bc34a;
+  --teal: #00b8a9;
+  --maroon: #800000;
+  --accent-orange: #ff9a9e;
+  --accent-red: #ff6b6b;
+}
+
+/* Header */
+.header {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: url('./images/header.gif') center center no-repeat;
+  background-size: cover;
+  border: 2px solid var(--pink);
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+  text-shadow: 2px 2px var(--dark-gray);
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  width: 100%;
+}
+
+.header h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 6vw;
+  margin-bottom: 10px;
+  color: var(--pink);
+  text-shadow: 2px 2px var(--lighter-gray);
+}
+
+.header p {
+  font-family: 'RobotoMono', monospace;
+  font-size: 3vw;
+  color: var(--dark-gray);
+  text-shadow: 2px 2px var(--lighter-gray);
+}

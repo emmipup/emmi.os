@@ -1,42 +1,3 @@
-/* Font files */
-@font-face {
-  font-family: 'Amatic SC';
-  src: url('./fonts/AmaticSC-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Audiowide';
-  src: url('./fonts/Audiowide-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'WorkSans';
-  src: url('./fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
-}
-
-/* Color palette */
-:root {
-  --dark-gray: #222222;
-  --medium-gray: #5c5c5c;
-  --light-gray: #b3b3b3;
-  --lighter-gray: #e6e6e6;
-  --white: #f7f7f7;
-  --purple: #9b7fd4;
-  --blue: #4c6cb3;
-  --pink: #ff8c8c;
-  --lavender: #e6e6fa;
-  --green: #8bc34a;
-  --teal: #00b8a9;
-  --maroon: #800000;
-  --accent-orange: #ff9a9e;
-  --accent-red: #ff6b6b;
-}
-
 /* Header */
 .header {
   position: relative;
@@ -87,11 +48,11 @@
 /* Navigation bar */
 .navigation-bar {
   background-color: var(--dark-gray);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation-bar-container {
@@ -102,6 +63,7 @@
   align-items: center;
   height: 60px;
   padding: 0 20px;
+  width: 100%;
 }
 
 .navigation-bar-logo h1 {
@@ -114,10 +76,13 @@
 
 .navigation-bar-links ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-align: center;
+  width: 50%;
 }
 
 .navigation-bar-links li:not(:last-child) {
@@ -151,7 +116,7 @@ body {
   background-color: var(--dark-gray);
   color: var(--white);
   font-family: 'Roboto', sans-serif;
-  margin-top: 60px; /* Push content below navigation bar */
+  margin-top: 100px; /* Push content below navigation bar */
 }
 
 /* Footer */
@@ -171,13 +136,25 @@ body {
     font-size: 5vw;
   }
 
+.navigation-bar-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+  }
+
 .navigation-links li:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
 .navigation-links li a {
-    padding: 0 10px;
+    padding: 10px 0;
     font-size: 14px;
+  }
+
+.navigation-bar-links {
+    width: 100%;
   }
 }
 
@@ -191,10 +168,12 @@ body {
   }
 
 .navigation-links li:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
+
 .navigation-links li a {
-    padding: 0 5px;
+    padding: 10px 0;
     font-size: 12px;
   }
 }

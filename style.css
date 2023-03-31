@@ -28,6 +28,36 @@ src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
 --blue: #1e7fcb;
 }
 
+/* Font files */
+@font-face {
+font-family: 'Amatic SC';
+src: url('./fonts/AmaticSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Audiowide';
+src: url('./fonts/Audiowide-Regular.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'RobotoMono';
+src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Color palette */
+:root {
+--dark-gray: #262626;
+--medium-gray: #5c5c5c;
+--light-gray: #8c8c8c;
+--lighter-gray: #c6c6c6;
+--white: #f7f7f7;
+--red: #d01f3c;
+--orange: #f9a01b;
+--yellow: #ffc600;
+--green: #7cb342;
+--blue: #1e7fcb;
+}
+
 /* Header */
 .header {
 position: relative;

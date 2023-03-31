@@ -86,52 +86,113 @@
 
 /* Navigation bar */
 .navigation-bar {
-  background-color: var(--pink);
-  border-bottom: 2px solid var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60px;
+  background-color: #1d1d1d;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .navigation-links {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-.navigation-links li {
-  float: left;
+.navigation-links li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .navigation-links li a {
-  display: block;
-  color: var(--white);
-  text-align: center;
-  padding: 14px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #f7f7f7;
   text-decoration: none;
-  font-family: 'WorkSans', sans-serif;
-  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
 }
 
-.navigation-links li a:hover {
-  background-color: var(--medium-gray);
+.navigation-links li a:hover, .navigation-links li a.active {
+  color: #1d1d1d;
+  background-color: #f7f7f7;
 }
 
-.navigation-links li a.active {
-  background-color: var(--white);
-  color: var(--dark-gray);
+.navigation-links li a:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  opacity: 0.1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Body */
+body {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  margin-top: 60px; /* Push content below navigation bar */
 }
 
 /* Footer */
 .footer {
-  background-color: var(--pink);
+  background-color: var(--medium-gray);
   color: var(--white);
   text-align: center;
-  padding: 10px 0;
-  margin-top: 30px;
+  padding: 20px;
 }
 
-.footer p {
-  margin: 0;
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 8vw;
+	}
+.header p {
+    font-size: 5vw;
+  }
+
+.navigation-links li:not(:last-child) {
+    margin-right: 10px;
+  }
+
+.navigation-links li a {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 10vw;
+  }
+
+.header p {
+    font-size: 6vw;
+  }
+
+.navigation-links li:not(:last-child) {
+    margin-right: 5px;
+  }
+.navigation-links li a {
+    padding: 0 5px;
+    font-size: 12px;
+  }
 }
 
 /* Generic */

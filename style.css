@@ -3,8 +3,18 @@
   src: url('./fonts/AmaticSC-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Audiowide';
+  src: url('./fonts/Audiowide-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
 /* Header */
-header {
+.header {
   position: relative;
   text-align: center;
   padding: 0;
@@ -12,6 +22,22 @@ header {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+}
+
+.header * {
+  color: #f7f7f7;
+  text-shadow: 2px 2px #000;
+}
+
+.header h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 6vw;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-family: 'RobotoMono', monospace;
+  font-size: 3vw;
 }
 
 .header-image img {
@@ -33,21 +59,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  font-family: 'Amatic SC';
-  font-size: 6vw;
-  margin-bottom: 10px;
-  color: #f7f7f7;
-  text-shadow: 2px 2px #000;
-}
-
-header p {
-  font-size: 3vw;
-  color: #f7f7f7;
-  text-shadow: 2px 2px #000;
-  font-family: 'Roboto', sans-serif;
-}
-
 body {
   background-color: #1c1c1c;
   color: #f7f7f7;
@@ -55,11 +66,9 @@ body {
 }
 
 a {
-  color: #f7f7f7;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f7f7f7;
   text-decoration: underline;
 }

@@ -41,8 +41,8 @@ src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: var(--lavender);
-  background-image: linear-gradient(to bottom, var(--lavender), var(--lighter-gray));
+  background: url('./images/header.gif') no-repeat center center fixed;
+  background-size: cover;
   border: 2px solid var(--pink);
 }
 
@@ -73,7 +73,10 @@ src: url('./fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
-  border-bottom: 2px solid var(--pink);
+  color: var(--white);
+  text-shadow: 2px 2px var(--dark-gray);
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
 }
 
 /* Body */
